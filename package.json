@@ -1,0 +1,16 @@
+{
+  "name": "aaaa",
+  "scripts": {
+    "dev": "serverless offline start --stage dev --noAuth"
+  },
+  "dependencies": {
+    "cryptr": "^6.0.3",
+    "querystring": "^0.2.1",
+    "serverless-dotenv-plugin": "^4.0.2",
+    "serverless-plugin-typescript": "^2.1.4"
+  },
+  "devDependencies": {
+    "serverless-offline": "^12.0.3",
+    "typescript": "^4.9.4"
+  }
+}

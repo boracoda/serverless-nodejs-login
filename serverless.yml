@@ -1,0 +1,33 @@
+org: movingpay
+app: prod-console
+service: node-api-console
+frameworkVersion: '3'
+
+# Load environment variables from .env files (default: false)
+# See https://www.serverless.com/framework/docs/environment-variables
+useDotenv: true
+
+# Plugins adicionados no projeto
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  deploymentMethod: direct
+  region: sa-east-1
+  runtime: nodejs14.x
+  memorySize: 128
+
+custom:
+  includeModules: true
+
+# Funções
+functions:
+  Login:    
+    events:
+      - httpApi:
+          path: /v1/login
+          method: post
+    handler: index.login
